@@ -1,10 +1,11 @@
 # X și 0 (Tic-Tac-Toe)
 
 **Autor:** Țîgîrlaș Antoanela
+
 **Grupa:** DJ2401
 
 ## Descrierea jocului
-X și 0 (Tic-Tac-Toe) este un joc pe o tablă 3×3 în care doi jucători, **X** și **O**, mută pe rând marcând câte o celulă liberă. Scopul este să aliniază 3 simboluri identice pe orizontală, verticală sau diagonală. Dacă toate cele 9 celule sunt ocupate și nu există o aliniere, jocul se termină la egalitate.
+X și 0 (Tic-Tac-Toe) este un joc pe o tablă 3×3 în care doi jucători, **X** și **O**, pe rând marchează câte o celulă liberă. Scopul este ca unul din jucători să alinieze 3 simboluri identice pe orizontală, verticală sau diagonală. Dacă toate cele 9 celule sunt ocupate și nu există o aliniere din partea oricăruia dintre jucători, jocul se termină la egalitate.
 
 ## Reguli de joc
 1. Jocul se desfășoară pe o grilă 3×3.
@@ -15,10 +16,10 @@ X și 0 (Tic-Tac-Toe) este un joc pe o tablă 3×3 în care doi jucători, **X**
 
 ## Structuri de date (rol / sarcină)
 `enum class Player`
-Reprezintă jucătorul curent. Poate avea valorile:
-None – celula este liberă.
-X – celula este ocupată de jucătorul X.
-O – celula este ocupată de jucătorul O.
+- Reprezintă jucătorul curent. Poate avea valorile:
+- None – celula este liberă.
+- X – celula este ocupată de jucătorul X.
+- O – celula este ocupată de jucătorul O.
 
 `struct Move`
 Reține coordonatele unei mutări (linie și coloană).
