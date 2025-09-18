@@ -1,6 +1,6 @@
 #pragma once
-#include "player.hpp"
-#include "move.hpp"
+#include "Player.hpp"
+#include "Move.hpp"
 
 class Board {
     Player _cells[3][3];
