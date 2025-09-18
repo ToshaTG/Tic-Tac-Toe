@@ -1,6 +1,6 @@
 # X și 0 (Tic-Tac-Toe)
 
-**Autor:** Țîgîrlaș Antoanela (Tosha)  
+**Autor:** Țîgîrlaș Antoanela
 **Grupa:** DJ2401
 
 ## Descrierea jocului
