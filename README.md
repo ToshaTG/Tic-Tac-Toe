@@ -16,7 +16,7 @@ X și 0 (Tic-Tac-Toe) este un joc pe o tablă 3×3 în care doi jucători, **X**
 
 ## Structuri de date (rol / sarcină)
 `enum class Player`
-- Reprezintă jucătorul curent. Poate avea valorile:
+ Reprezintă jucătorul curent. Poate avea valorile:
 - None – celula este liberă.
 - X – celula este ocupată de jucătorul X.
 - O – celula este ocupată de jucătorul O.
@@ -34,7 +34,7 @@ Expune operații de bază:
 
 `class GameEngine`
 Gestionează logica principală a jocului:
-- reține jucătorul curent(X sau 0);
+- reține jucătorul curent (X sau 0);
 - verifică dacă mutările făcute sunt valide;
 - schimbă tura pentru fiecare jucător după fiecare mutare;
 - determină câștigătorul sau remiza;
