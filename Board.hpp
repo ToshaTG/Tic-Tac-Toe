@@ -1,22 +1,24 @@
 #pragma once
 #include "Player.hpp"
 #include "Move.hpp"
+#include <array>
 #include <iosfwd>
 
 class Board {
-    Player _cells[3][3];
 public:
-    // ctor implicit: tabla goală
-    Board();
+    using Row  = std::array<Player, 3>;
+    using Grid = std::array<Row, 3>;
 
-    // ctor cu parametri: umple toată tabla cu aceeași valoare (default None)
-    explicit Board(Player fill);
+private:
+    Grid _cells{};
 
-    // ctor de copiere / operator=
-    Board(const Board& other);
-    Board& operator=(const Board& other);
+public:
+    Board();                       // implicit
+    explicit Board(Player fill);   // umple tabla
 
-    // API existent
+    Board(const Board&) = default;
+    Board& operator=(const Board&) = default;
+
     void   Reset();
     bool   InBounds(int r, int c) const;
     Player Get(int r, int c) const;
@@ -24,11 +26,9 @@ public:
     bool   Place(int r, int c, Player p);
     bool   IsFull() const;
 
-    // comparare
-    bool operator==(const Board& other) const;
+    bool operator==(const Board& other) const { return _cells == other._cells; }
     bool operator!=(const Board& other) const { return !(*this == other); }
 
-    // I/O
     friend std::ostream& operator<<(std::ostream& os, const Board& b);
     friend std::istream& operator>>(std::istream& is, Board& b);
 };
